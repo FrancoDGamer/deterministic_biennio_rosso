@@ -1,0 +1,18 @@
+title: Cabinet
+is-pinned-card: true
+tags: advisor
+card-image: img/muller_cabinet.jpg
+view-if: pcdi_in_government
+on-arrival: last_cabinet_action = 1
+new-page: true 
+
+= Cabinet
+
+With a PCDI chancellor and PCDI cabinet members, we can direct the affairs of the national government.
+
+- #govt_affairs
+- @back: Return to main
+
+@back
+on-arrival: last_cabinet_action = 0
+go-to: root
