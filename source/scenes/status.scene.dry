@@ -26,7 +26,7 @@ Paramilitary: [+ para_resources +]
 
 [? if psi_in_government and not psi_majority: Coalition Dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-Internal Dissent: [+ dissent_percent : dissent +]
+Internal Dissent: [+ dissent_percent : dissent +] ([+ dissent_percent +])
 
 Revolutionary Fervour: [+ revolutionary_fervour +]%
 
@@ -34,9 +34,9 @@ Revolutionary Fervour: [+ revolutionary_fervour +]%
 
 {!<span class="tooltip-text" title="The other parties view us with doubt, considering the party contains radicals advocating for the fall of the Kingdom. The question is: How radical?">Radicalisation</span>!}: [+ radicalisation : radicalisation +]
 
-[? if prime_minister = "D'Annunzio" : Our relationship with D'Annunzio is [+ dannunzio_relation : radicalisation +] ?]
+[? if prime_minister = "D'Annunzio" : Our relationship with D'Annunzio is [+ dannunzio_relation : radicalisation +] [+ dannunzio_relation +] ?]
 
-[? if prime_minister = "D'Annunzio" : D'Annunzio's influence within the party is [+ dannunzio_influence : influence +] ?]
+[? if prime_minister = "D'Annunzio" : D'Annunzio's influence within the party is [+ dannunzio_influence : influence +] [+ dannunzio_influence +] ?]
 
 = Government
 
@@ -123,41 +123,41 @@ American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? 
 
 = Inter-party Relations
 
-[? if pcdi_formed : {!<span class="tooltip-text" title="Communist Party of Italy">PCd'I</span>!}: [+ pcdi_relation : relationships +] ?]
+[? if pcdi_formed : {!<span class="tooltip-text" title="Communist Party of Italy">PCd'I</span>!}: [+ pcdi_relation : relationships +] [+ (pcdi_relation) +] ?]
 
-[? if psu_formed : {!<span class="tooltip-text" title="Unitary Socialist Party">PSU</span>!}: [+ psu_relation : relationships +] ?]
+[? if psu_formed : {!<span class="tooltip-text" title="Unitary Socialist Party">PSU</span>!}: [+ psu_relation : relationships +] [+ (psu_relation) +] ?]
 
-[? if not psri_collapse : {!<span class="tooltip-text" title="Italian Reformist Socialist Party">PSRI</span>!}: [+ psri_relation : relationships +] ?]
+[? if not psri_collapse : {!<span class="tooltip-text" title="Italian Reformist Socialist Party">PSRI</span>!}: [+ psri_relation : relationships +] [+ (psri_relation) +] ?]
 
-[? if pll_formed : {!<span class="tooltip-text" title="Liberal Workers' Party">PLL</span>!}: [+ pll_relation : relationships +] ?]
+[? if pll_formed : {!<span class="tooltip-text" title="Liberal Workers' Party">PLL</span>!}: [+ pll_relation : relationships +] [+ (pll_relation) +] ?]
 
-[? if pri_prominent = 1: {!<span class="tooltip-text" title="Italian Republican Party">PRI</span>!}: [+ pri_relation : relationships +] ?]
+[? if pri_prominent = 1: {!<span class="tooltip-text" title="Italian Republican Party">PRI</span>!}: [+ pri_relation : relationships +] [+ (pri_relation) +] ?]
 
-[? if not pdsi_formed : {!<span class="tooltip-text" title="Social Democracy">DS</span>!}: [+ ds_relation : relationships +] ?]
-[? if pdsi_formed : {!<span class="tooltip-text" title="Italian Social Democratic Party">PDSI</span>!}: [+ ds_relation : relationships +] ?]
+[? if not pdsi_formed : {!<span class="tooltip-text" title="Social Democracy">DS</span>!}: [+ ds_relation : relationships +] [+ (ds_relation) +] ?]
+[? if pdsi_formed : {!<span class="tooltip-text" title="Italian Social Democratic Party">PDSI</span>!}: [+ ds_relation : relationships +] [+ (pdsi_relation) +] ?]
 
-{!<span class="tooltip-text" title="Italian People's Party">PPI</span>!}: [+ ppi_relation : relationships +]
+{!<span class="tooltip-text" title="Italian People's Party">PPI</span>!}: [+ ppi_relation : relationships +] [+ ppi_relation) +]
 
-[? if not pldi_formed : {!<span class="tooltip-text" title="Liberals, Democrats and Radicals">LDR</span>!}: [+ ldr_relation : relationships +] ?]
-[? if pldi_formed : {!<span class="tooltip-text" title="Italian Democratic Liberal Party">PLDI</span>!}: [+ ldr_relation : relationships +] ?]
+[? if not pldi_formed : {!<span class="tooltip-text" title="Liberals, Democrats and Radicals">LDR</span>!}: [+ ldr_relation : relationships +] [+ (ldr_relation) +] ?]
+[? if pldi_formed : {!<span class="tooltip-text" title="Italian Democratic Liberal Party">PLDI</span>!}: [+ ldr_relation : relationships +] [+ (ldr_relation) +] ?]
 
-[? if not pli_formed : {!<span class="tooltip-text" title="Liberal Union">UL</span>!}: [+ ul_relation : relationships +] ?]
-[? if pli_formed : {!<span class="tooltip-text" title="Italian Liberal Party">PLI</span>!}: [+ ul_relation : relationships +] ?]
+[? if not pli_formed : {!<span class="tooltip-text" title="Liberal Union">UL</span>!}: [+ ul_relation : relationships +] [+ (ul_relation) +] ?]
+[? if pli_formed : {!<span class="tooltip-text" title="Italian Liberal Party">PLI</span>!}: [+ ul_relation : relationships +] [+ (ul_relation) +] ?]
 
-[? if not pnf_formed : {!<span class="tooltip-text" title="Italian Fasces of Combat">FdC</span>!}: [+ pnf_relation : relationships +] ?]
-[? if pnf_formed : {!<span class="tooltip-text" title="National Fascist Party">PNF</span>!}: [+ pnf_relation : relationships +] ?]
+[? if not pnf_formed : {!<span class="tooltip-text" title="Italian Fasces of Combat">FdC</span>!}: [+ pnf_relation : relationships +] [+ (pnf_relation) +] ?]
+[? if pnf_formed : {!<span class="tooltip-text" title="National Fascist Party">PNF</span>!}: [+ pnf_relation : relationships +] [+ (pnf_relation) +] ?]
 
 = Internal Factions of the [+ psi_name +]
 
-{!<span class="tooltip-text" title="The Communists are interested in radical, transformative policies and revolutionary action.">Communists</span>!} strength: [+ communist_strength : strength +], dissent: [+ communist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Communists are interested in radical, transformative policies and revolutionary action.">Communists</span>!} strength: [+ communist_strength : strength +] ([+ communist_strength +]), dissent: [+ communist_dissent : dissent +] ([+ communist_dissent +])
 
-{!<span class="tooltip-text" title="The Maximalists is a faction of Centre Marxists, between reform and revolution.">Maximalists</span>!} strength: [+ maximalist_strength : strength +], dissent: [+ maximalist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Maximalists is a faction of Centre Marxists, between reform and revolution.">Maximalists</span>!} strength: [+ maximalist_strength : strength +] ([+ maximalist_strength +]), dissent: [+ maximalist_dissent : dissent +] ([+ maximalist_dissent +])
 
-{!<span class="tooltip-text" title="Labour's goal is economic reform and benefits for organized workers.">Labour</span>!} strength: [+ labour_strength : strength +], dissent: [+ labour_dissent : dissent +]
+{!<span class="tooltip-text" title="Labour's goal is economic reform and benefits for organized workers.">Labour</span>!} strength: [+ labour_strength : strength +] ([+ labour_strength +]), dissent: [+ labour_dissent : dissent +] ([+ labour_dissent +])
 
-[? if syndicalist_active : {!<span class="tooltip-text" title="Syndicalist's are a splinter faction of Labour, advocating for radical strikes and workers' councils.">Syndicalists</span>!} strength: [+ syndicalist_strength : strength +], dissent: [+ syndicalist_dissent : dissent +] ?]
+[? if syndicalist_active : {!<span class="tooltip-text" title="Syndicalist's are a splinter faction of Labour, advocating for radical strikes and workers' councils.">Syndicalists</span>!} strength: [+ syndicalist_strength : strength +] ([+ syndicalist_strength +]), dissent: [+ syndicalist_dissent : dissent +] ?] ([+ syndicalist_dissent +])
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformists</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformists</span>!} strength: [+ reformist_strength : strength +] ([+ reformist_strength +]), dissent: [+ reformist_dissent : dissent +] ([+ reformist_dissent +])
 
 @paramilitaries
 on-arrival: {!
@@ -205,23 +205,23 @@ Streetfighting: [+ violent_prevalence : violence +]
 
 [? if not national_congress_seen and not pcdi_formed : {!<span class="tooltip-text" title="The Red Guards are a paramilitary socialist group asscoiated with the PSI.">Red Guards</span>!} Strength: [+ rg_strength_2 +] thousand ?]
 
-[? if not national_congress_seen and not pcdi_formed : Red Guard Militarization: [+ rg_militancy : militancy +] ?]
+[? if not national_congress_seen and not pcdi_formed : Red Guard Militarization: [+ rg_militancy : militancy +] ?] [+ rg_militancy +]
 
 [? if not national_congress_seen and pcdi_formed : {!<span class="tooltip-text" title="The Red Guards are a paramilitary socialist group, its radical wing asscoiated with the PCd'I.">Red Guards - PCd'I</span>!} Strength: [+ sov_rg_strength_2 +] thousand ?]
 
-[? if not national_congress_seen and pcdi_formed : Red Guard - PCd'I Militarization: [+ sov_rg_militancy : militancy +] ?]
+[? if not national_congress_seen and pcdi_formed : Red Guard - PCd'I Militarization: [+ sov_rg_militancy : militancy +] [+ sov_militancy +] ?] 
 
 [? if not national_congress_seen and pcdi_formed : {!<span class="tooltip-text" title="The Red Guards are a paramilitary socialist group, its moderate wing asscoiated with the PSI.">Red Guards - PSI</span>!} Strength: [+ rg_strength_2 +] thousand ?]
 
-[? if not national_congress_seen and pcdi_formed : Red Guard - PSI Militarization: [+ rg_militancy : militancy +] ?]
+[? if not national_congress_seen and pcdi_formed : Red Guard - PSI Militarization: [+ rg_militancy : militancy +] [+ rg_militancy +] ?] 
 
 [? if arditi_formed : {!<span class="tooltip-text" title="The Arditi del Popolo is a anti-fascist group composed of anarchists to communists to republicans.">Arditi del Popolo</span>!} Strength: [+ adp_strength_2 +] thousand ?]
 
-[? if arditi_formed: Arditi del Popolo Militarization: [+ adp_militancy : militancy +] ?]
+[? if arditi_formed: Arditi del Popolo Militarization: [+ adp_militancy : militancy +] [+ adp_militancy +] ?]
 
 [? if not national_congress_seen : {!<span class="tooltip-text" title="The Fasci is a right-wing organisation of war veterans associated with the PNF.">Fasci</span>!} Strength: [+ fdc_strength_2 +] thousand ?]
 
-[? if not national_congress_seen : Fasci Militarization: [+ fdc_militancy : militancy +] ?]
+[? if not national_congress_seen : Fasci Militarization: [+ fdc_militancy : militancy +] [+ fdc_militancy +] ?]
 
 [? if not national_congress_seen : {!<span class="tooltip-text" title="The Arditismo are an organisation associated with the Fasci, comprised of former members of the 'Arditi' in the Italian Army.">Arditismo</span>!} Strength: [+ ard_strength_2 +] thousand ?]
 
@@ -233,25 +233,25 @@ Streetfighting: [+ violent_prevalence : violence +]
 
 [? if communist_terror : {!<span class="tooltip-text" title="The new Red Guards are a radical paramilitary group asscoiated with the PCd'I.">New Red Guards</span>!} ?]
 
-[? if communist_terror: NRG Attack Likelihood : [+ communist_bomb_display : warnings +] ?]
+[? if communist_terror: NRG Attack Likelihood : [+ communist_bomb_display : warnings +] [+ communist_bomb_display +] ?]
 
 [? if republican_terror : {!<span class="tooltip-text" title="The Anti-Communist Brigades are a republican paramilitary group asscoiated with the former liberal parties.">Anti-Communist Brigades</span>!} ?]
 
-[? if republican_terror: ACB Attack Likelihood : [+ republican_bomb_display : warnings +] ?]
+[? if republican_terror: ACB Attack Likelihood : [+ republican_bomb_display : warnings +] [+ republican_bomb_display +] ?]
 
 [? if fascist_terror : {!<span class="tooltip-text" title="The new Fasci are a radical paramilitary group asscoiated with the former PNF..">Fasci</span>!} ?]
 
-[? if fascist_terror: FdC Attack Likelihood : [+ fascist_bomb_display : warnings +] ?]
+[? if fascist_terror: FdC Attack Likelihood : [+ fascist_bomb_display : warnings +] [+ fascist_bomb_display +] ?]
 
 = Government Forces
 
 [? if not national_congress_seen : Regio Esercito: ?][? if national_congress_seen : Esercito Italiano: ?] [+ army_strength +] thousand troops.
 
-[? if not national_congress_seen : Regio Esercito Loyalty: ?][? if national_congress_seen : Esercito Italiano Loyalty: ?] [+ army_loyalty : loyalty +]
+[? if not national_congress_seen : Regio Esercito Loyalty: ?][? if national_congress_seen : Esercito Italiano Loyalty: ?] [+ army_loyalty : loyalty +] [+ army_loyalty +]
 
 [? if psi_in_government : Carabinieri: [+ interior_police_strength +] thousand officers ?]
 
-[? if psi_in_government : Carabinieri Loyalty: [+ interior_police_loyalty: loyalty +] ?]
+[? if psi_in_government : Carabinieri Loyalty: [+ interior_police_loyalty: loyalty +] [+ interior_police_loyalty +] ?] 
 
 @polls
 on-arrival: {!
@@ -318,15 +318,15 @@ Catholics: [+ psi_name +]: [+ catholic_psi_display +]%, [? if pcdi_formed : PCd'
 
 = Foreign Relations
 
-Holy See: [+ papal_relation : radicalisation +]
+Holy See: [+ papal_relation : radicalisation +] ([+ papal_relation +])
 
-Entente: [+ entente_relation : radicalisation +]
+Entente: [+ entente_relation : radicalisation +] ([+ entente_relation +])
 
-United States: [+ american_relation : radicalisation +]
+United States: [+ american_relation : radicalisation +] ([+ american_relation +])
 
-Russian SFSR: [+ soviet_relation : radicalisation +]
+Russian SFSR: [+ soviet_relation : radicalisation +] ([+ soviet_relation +])
 
-Yugoslavia: [+ balkan_relation : radicalisation +]
+Yugoslavia: [+ balkan_relation : radicalisation +] ([+ balkan_relation +])
 
 = International Situations
 
