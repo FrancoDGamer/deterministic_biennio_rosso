@@ -12,7 +12,10 @@ if (Q[card.id + "_timer"]) {
     Q[card.id + "_timer"] = 0;
 }
 if (Q.last_party_action) {
-    last_party_action = 0
+    last_party_action = 0;
+}
+if (Q.last_paramilitary_action) {
+    last_paramilitary_action = 0;
 }
 // reduce visit count
 if (this.state.visits[card.id]) {
