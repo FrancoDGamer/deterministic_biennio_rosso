@@ -136,7 +136,7 @@ American Debts: [? if american_debts > 0 and not in_default : Significant ?] [? 
 [? if not pdsi_formed : {!<span class="tooltip-text" title="Social Democracy">DS</span>!}: [+ ds_relation : relationships +] [+ (ds_relation) +] ?]
 [? if pdsi_formed : {!<span class="tooltip-text" title="Italian Social Democratic Party">PDSI</span>!}: [+ ds_relation : relationships +] [+ (pdsi_relation) +] ?]
 
-{!<span class="tooltip-text" title="Italian People's Party">PPI</span>!}: [+ ppi_relation : relationships +] [+ ppi_relation) +]
+{!<span class="tooltip-text" title="Italian People's Party">PPI</span>!}: [+ ppi_relation : relationships +] [+ (ppi_relation) +]
 
 [? if not pldi_formed : {!<span class="tooltip-text" title="Liberals, Democrats and Radicals">LDR</span>!}: [+ ldr_relation : relationships +] [+ (ldr_relation) +] ?]
 [? if pldi_formed : {!<span class="tooltip-text" title="Italian Democratic Liberal Party">PLDI</span>!}: [+ ldr_relation : relationships +] [+ (ldr_relation) +] ?]
